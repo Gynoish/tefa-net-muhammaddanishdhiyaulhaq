@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Todo List</h1>
+
+        <div class="form-container">
+            <input type="text" id="judul" placeholder="Judul">
+            <input type="text" id="deskripsi" placeholder="Deskripsi">
+            <button id="addTodo">Tambah Todo</button>
+        </div>
+
+        <div class="table-container">
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th>Judul</th>
+                        <th>Deskripsi</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
+                    </tr>
+                </thead>
+                <tbody id="todoTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

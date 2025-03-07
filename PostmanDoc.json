@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "d4a1f821-fe19-4f66-9bd5-872ac680930c",
+		"name": "📜 TodoList API Documentation",
+		"description": "TodoList API adalah layanan berbasis RESTful yang memungkinkan pengguna untuk **mengelola daftar tugas** (**Todo List**). API ini menyediakan berbagai endpoint untuk **membuat, membaca, memperbarui, dan menghapus** tugas.\n\nDengan menggunakan API ini, pengguna dapat dengan mudah menambahkan tugas baru, memperbarui status tugas, mendapatkan daftar semua tugas, dan menghapus tugas yang tidak diperlukan.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42851163"
+	},
+	"item": [
+		{
+			"name": "GET TodoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/Todo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"Todo"
+					]
+				},
+				"description": "## **📌Mengambil Semua Tugas**\n\nEndpoint ini digunakan untuk mengambil semua daftar tugas (Todo List) yang tersimpan di dalam sistem."
+			},
+			"response": [
+				{
+					"name": "Success GET TodoList",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4000/api/Todo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 03:52:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 27,\n        \"judul\": \"Tugas Kelompok\",\n        \"deskripsi\": \"Membuat suatu project menggunalan NLP\",\n        \"createAt\": \"2025-03-07T10:18:02.1379773\"\n    },\n    {\n        \"id\": 8,\n        \"judul\": \"Mengerjakan .NET\",\n        \"deskripsi\": \"Membuat suatu mini project TODO List dengan berbagai aspek\",\n        \"createAt\": \"2025-03-06T23:43:54.8664856\"\n    },\n    {\n        \"id\": 5,\n        \"judul\": \"MakanMakan\",\n        \"deskripsi\": \"Kumpul Dikos Teman untuk merayakan ulang tahun\",\n        \"createAt\": \"2025-03-06T19:20:17.24\"\n    },\n    {\n        \"id\": 4,\n        \"judul\": \"Tugas Metopen\",\n        \"deskripsi\": \"Mencari judul yang bisa digunakan untuk Tugas Akhir\",\n        \"createAt\": \"2025-03-06T19:20:17.24\"\n    },\n    {\n        \"id\": 3,\n        \"judul\": \"BUKBER\",\n        \"deskripsi\": \"Buka Puasa Bersama Teman\",\n        \"createAt\": \"2025-03-06T19:20:17.24\"\n    },\n    {\n        \"id\": 2,\n        \"judul\": \"Tugas SisTer\",\n        \"deskripsi\": \"Sebutkan apa peran sistem terdistribusi dalam situs Sirekap\",\n        \"createAt\": \"2025-03-06T19:20:17.24\"\n    },\n    {\n        \"id\": 1,\n        \"judul\": \"Tugas IMK\",\n        \"deskripsi\": \"Mereview webiste pemerintahan dengan memfokuskan pada tampilan untuk pengguna\",\n        \"createAt\": \"2025-03-06T19:20:17.24\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET TodoList by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/Todo/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"Todo",
+						"5"
+					]
+				},
+				"description": "## **📌Mengambil Tugas Sesuai ID**\n\nEndpoint ini digunakan untuk mengambil tugas sesuai ID dari daftar tugas (Todo List) yang tersimpan di dalam sistem."
+			},
+			"response": [
+				{
+					"name": "Success GET TodoList by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4000/api/Todo/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 03:52:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"judul\": \"MakanMakan\",\n    \"deskripsi\": \"Kumpul Dikos Teman untuk merayakan ulang tahun\",\n    \"createAt\": \"2025-03-06T19:20:17.24\"\n}"
+				},
+				{
+					"name": "Failed GET TodoList by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4000/api/Todo/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo",
+								"6"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 04:03:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-671965f201412da3cd7dd505607a62db-539cd51ea0da6169-00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST TodoList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Judul\": \"Mengerjakan .NET\",\r\n    \"Deskripsi\": \"Membuat suatu mini project TODO List\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/Todo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"Todo"
+					]
+				},
+				"description": "## 📌 **Menambahkan Tugas (POST Todo)**\n\nEndpoint ini digunakan untuk **menambahkan tugas baru** ke dalam daftar tugas (**Todo List**). Data tugas yang dikirimkan akan disimpan di database."
+			},
+			"response": [
+				{
+					"name": "Success POST TodoList",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Judul\": \"Tugas Kelompok\",\r\n    \"Deskripsi\": \"Membuat suatu project menggunalan NLP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4000/api/Todo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 03:18:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 27,\n    \"judul\": \"Tugas Kelompok\",\n    \"deskripsi\": \"Membuat suatu project menggunalan NLP\",\n    \"createAt\": \"2025-03-07T10:18:02.1379773+07:00\"\n}"
+				},
+				{
+					"name": "Failed POST TodoList",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Judul\": \"Tugas Kelompok\",\r\n    \"Deskripsi\": \"Membuat suatu project menggunalan NLP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4000/api/Todo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 04:04:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"errors\": {\n        \"Deskripsi\": [\n            \"Sudah Ada Deskripsi yang Serupa\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT TodoList",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Judul\": \"MakanMakan\",\r\n    \"Deskripsi\": \"Kumpul Dikos Teman untuk merayakan ulang tahun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/Todo/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"Todo",
+						"5"
+					]
+				},
+				"description": "## **📌Mengubah Tugas**\n\nEndpoint ini digunakan untuk memperbarui data tugas yang sudah ada dalam daftar tugas (**Todo List**). Perubahan dapat mencakup pembaruan pada **judul tugas (title), deskripsi (description).**"
+			},
+			"response": [
+				{
+					"name": "Success PUT TodoList",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Judul\": \"MakanMakan\",\r\n    \"Deskripsi\": \"Kumpul kampus bareng Teman untuk merayakan ulang tahun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4000/api/Todo/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 03:54:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"judul\": \"MakanMakan\",\n    \"deskripsi\": \"Kumpul kampus bareng Teman untuk merayakan ulang tahun\",\n    \"createAt\": \"2025-03-06T19:20:17.24\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE TodoList",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/Todo/26",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"Todo",
+						"26"
+					]
+				},
+				"description": "## 📌 **Menghapus Tugas (Delete Todo)**\n\nEndpoint ini digunakan untuk menghapus tugas dari daftar tugas (**Todo List**) berdasarkan **ID**. Setelah tugas dihapus, data tidak bisa dikembalikan."
+			},
+			"response": [
+				{
+					"name": "Success DELETE TodoList",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4000/api/Todo/27",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo",
+								"27"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 03:54:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 27,\n    \"judul\": \"Tugas Kelompok\",\n    \"deskripsi\": \"Membuat suatu project menggunalan NLP\",\n    \"createAt\": \"2025-03-07T10:18:02.1379773\"\n}"
+				},
+				{
+					"name": "Failed DELETE TodoList",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4000/api/Todo/27",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"Todo",
+								"27"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Mar 2025 04:05:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-9ce179cca4671bef19a83496c63bc604-29a356734679d486-00\"\n}"
+				}
+			]
+		}
+	]
+}
